@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="COMPANY" schema="RECRUIT">
+		<primary-key>
+			<generator class="sequence"></generator>
+			<key-column name="COMPANY_ID" type="java.lang.Integer" />
+		</primary-key>
+	</table>
+	<table name="DRIVER" schema="RECRUIT">
+		<primary-key>
+			<generator class="sequence"></generator>
+			<key-column name="DRIVER_ID" type="java.lang.Integer" />
+		</primary-key>
+		<column name="DRIVER_AGE" type="java.lang.Integer"></column>
+		<column name="DRIVER_DETAILS" type="java.lang.Integer"></column>
+	</table>
+	<table name="DRIVERDETAILS" schema="RECRUIT">
+		<primary-key>
+			<generator class="sequence"></generator>
+			<key-column name="DRIVER_DETAILS_ID"
+				type="java.lang.Integer" />
+		</primary-key>
+		<column name="DRIVER_ID" type="java.lang.Integer"></column>
+		<column name="DIRVERAGE" type="java.lang.Integer"></column>
+		<column name="TEL" type="java.lang.Integer"></column>
+	</table>
+	<table name="JOB" schema="RECRUIT">
+		<primary-key>
+			<generator class="sequence"></generator>
+			<key-column name="JOB_ID" type="java.lang.Integer" />
+		</primary-key>
+		<column name="JOB_RECRUITMENT_NUMBER"
+			type="java.lang.Integer">
+		</column>
+		<column name="JOB_COMPANY" type="java.lang.Integer"></column>
+		<column name="JOB_OFFICE" type="java.lang.Integer"></column>
+	</table>
+	<table name="OFFICE" schema="RECRUIT">
+		<primary-key>
+			<generator class="sequence"></generator>
+			<key-column name="OFFICE_ID" type="java.lang.Integer" />
+		</primary-key>
+		<column name="OFFICE_COMPANY" type="java.lang.Integer"></column>
+	</table>
+</hibernate-reverse-engineering>

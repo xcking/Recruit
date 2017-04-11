@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="driver" extends="struts-default">
+	<global-results>
+		<result name="toLogin">/Driver/Login.jsp</result>
+	</global-results>
+		<action name="driver_*" class="com.cx.action.DriverAction" method="{1}">
+			<result name="loginSuccess">/Driver/LoginSuccess.jsp</result>
+			<result name="toRegister">/Driver/Register.jsp</result>
+		</action>
+		<action name="driverDetails_*" class="com.cx.action.DriverDetailsAction" method="{1}">
+			<result name="toDetails">/Driver/Details.jsp</result>
+			<result name="homepage">/Driver/homePage.jsp</result>
+		</action>
+	</package>
+	<package name="job" extends="struts-default">
+		<action name="office_*" class="com.cx.action.OfficeAction" method="{1}">
+			<result name="toLogin">/Job/Login.jsp</result>
+			<result name="LoginSuccess">/Job/LoginSuccess.jsp</result>
+			<result name="register">/Job/Register.jsp</result>
+		</action>
+		<action name="company_*"  class="com.cx.action.CompanyAction" method="{1}">
+			<result name="toAdd">/Job/AddCompany.jsp</result>
+			<result name="addCompanySuccess">/Job/addCompanySuccess.jsp</result>
+			<result name="getAllJob">/Job/companyJobList.jsp</result>
+		</action>
+		<action name="job_*" class="com.cx.action.JobAction" method="{1}">
+			<result name="toAddJob">/Job/Addjob.jsp</result>
+			<result name="addSuccess">/Job/AddJobSuccess.jsp</result>
+			<result name="adderror">/Job/Error.jsp</result>
+			<result name="error">/Job/Error.jsp</result>
+			<result name="input">/Job/Error.jsp</result>
+		</action>
+	</package>
+</struts>    
